@@ -4,15 +4,17 @@ const {
     withOpacityValue,
 } = require("@left4code/tw-starter/dist/js/tailwind-config-helper");
 
+
 module.exports = {
-    mode: "jit",
     content: [
         "./src/**/*.{php,html,js,jsx,ts,tsx,vue}",
         "./resources/**/*.{php,html,js,jsx,ts,tsx,vue}",
         "./node_modules/@left4code/tw-starter/**/*.js",
         ".//*.html",
+        "*.html",
+        // './index-page.html',
+        // "index-page.html"
     ],
-    darkMode: "class",
     theme: {
         extend: {
             colors: {
@@ -70,7 +72,7 @@ module.exports = {
         },
     },
     plugins: [require("@tailwindcss/forms")],
-    variants: {
+    layer: {
         extend: {
             boxShadow: ["dark"],
         },
